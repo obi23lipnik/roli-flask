@@ -35,7 +35,6 @@
 </head>
 
 <body id="page-top">
-
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -235,15 +234,63 @@
         </div>
     </section>
 
-    <aside class="bg-dark">
+    <aside class="bg-povp">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Vas zanima več o naši ponudbi?</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Pošljite povpraševanje!</a>
+                <button type="button" class="btn btn-default btn-xl wow tada" data-toggle="modal" data-target="#myModal">Pošljite povpraševanje!</button>
+                    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" name="commentform" method="post" action="send_form_email.php">
+    <div class="form-group">
+        <label class="control-label col-md-4" for="first_name">First Name</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4" for="last_name">Last Name</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4" for="email">Email Address</label>
+        <div class="col-md-6 input-group">
+        <span class="input-group-addon">@</span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-4" for="comment">Question or Comment</label>
+        <div class="col-md-6">
+            <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Your question or comment here"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <button type="submit" value="Submit" class="btn btn-custom pull-right">Send</button>
+        </div>
+    </div>
+</form>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
             </div>
         </div>
     </aside>
-
     <section id="contact">
         <div class="container">
             <div class="row">
